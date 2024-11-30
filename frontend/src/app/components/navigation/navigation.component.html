@@ -1,0 +1,58 @@
+<nav class="w-full bg-white dark:bg-background">
+  <div
+    class="mx-auto justify-between px-4 md:flex md:items-center md:px-8 lg:max-w-7xl"
+  >
+    <div>
+      <div class="flex items-center justify-between py-3 md:block md:py-5">
+        <a routerLink="/">
+          <h2 class="text-xl font-bold text-black">
+            SPŠT Knižnica
+          </h2>
+        </a>
+        <div class="md:hidden">
+          <button
+            class="rounded-md p-2 text-gray-700 outline-none focus:border focus:border-gray-400"
+            (click)="toggleNavbar()"
+          >
+            <ng-container *ngIf="navbar">
+              <svg class="text-black h-6 font-bold">
+                <use xlink:href="#x-icon"></use>
+              </svg>
+            </ng-container>
+            <ng-container *ngIf="!navbar">
+              <svg class="text-black h-6 font-bold">
+                <use xlink:href="#menu-icon"></use>
+              </svg>
+            </ng-container>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        class="mt-8 flex-1 justify-self-center pb-3 md:mt-0 md:block md:pb-0"
+        [ngClass]="{ block: navbar, hidden: !navbar }"
+      >
+        <ul
+          class="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0"
+        >
+          <li>
+            <a routerLink="/" class="link-class">Domov</a>
+          </li>
+          <li>
+            <a routerLink="/books" class="link-class">Knihy</a>
+          </li>
+          <li>
+            <a routerLink="/categories" class="link-class">Kategórie</a>
+          </li>
+          <li>
+            <a routerLink="/publishers" class="link-class">Vydavateľstvá</a>
+          </li>
+          <li>
+            <a routerLink="/authors" class="link-class">Spisovatelia</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

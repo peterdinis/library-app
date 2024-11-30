@@ -15,14 +15,10 @@
             (click)="toggleNavbar()"
           >
             <ng-container *ngIf="navbar">
-              <svg class="text-black h-6 font-bold">
-                <use xlink:href="#x-icon"></use>
-              </svg>
+              <lucide-icon name="x" [size]="18"></lucide-icon>
             </ng-container>
             <ng-container *ngIf="!navbar">
-              <svg class="text-black h-6 font-bold">
-                <use xlink:href="#menu-icon"></use>
-              </svg>
+              <lucide-icon name="menu" [size]="18"></lucide-icon>
             </ng-container>
           </button>
         </div>

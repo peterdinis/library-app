@@ -1,18 +1,18 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { IconsModule } from '../icons/icons.module';
-import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
+import { CommonModule } from "@angular/common";
+import { Component } from "@angular/core";
+import { IconsModule } from "../icons/icons.module";
+import { ThemeToggleComponent } from "../theme-toggle/theme-toggle.component";
 
 @Component({
-  selector: 'app-navigation',
-  imports: [CommonModule, IconsModule, ThemeToggleComponent],
-  templateUrl: './navigation.component.html',
-  styleUrl: './navigation.component.css'
+	selector: "app-navigation",
+	imports: [CommonModule, IconsModule, ThemeToggleComponent],
+	templateUrl: "./navigation.component.html",
+	styleUrl: "./navigation.component.css",
 })
 export class NavigationComponent {
-  navbar: boolean = false;
+	navbar = false;
 
-  toggleNavbar(): void {
-    this.navbar = !this.navbar;
-  }
+	toggleNavbar(): void {
+		this.navbar = !this.navbar;
+	}
 }

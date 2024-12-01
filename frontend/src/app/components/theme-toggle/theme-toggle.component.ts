@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
-import { ThemeService } from '../../services/theme.service';
-import { IconsModule } from '../icons/icons.module';
+import { Component } from "@angular/core";
+import type { ThemeService } from "../../services/theme.service";
+import { IconsModule } from "../icons/icons.module";
 
 @Component({
-  selector: 'theme-toggle',
-  standalone: true,
-  imports: [IconsModule],
-  template: `
+	selector: "theme-toggle",
+	standalone: true,
+	imports: [IconsModule],
+	template: `
     <button
       (click)="toggleTheme()"
       class="flex items-center gap-2 px-4 py-2 text-white bg-gray-800 rounded dark:bg-gray-200 dark:text-black"
@@ -22,13 +22,13 @@ import { IconsModule } from '../icons/icons.module';
   `,
 })
 export class ThemeToggleComponent {
-  constructor(private themeService: ThemeService) {}
+	constructor(private themeService: ThemeService) {}
 
-  toggleTheme(): void {
-    this.themeService.toggleTheme();
-  }
+	toggleTheme(): void {
+		this.themeService.toggleTheme();
+	}
 
-  isDarkMode(): boolean {
-    return document.documentElement.classList.contains('dark');
-  }
+	isDarkMode(): boolean {
+		return document.documentElement.classList.contains("dark");
+	}
 }

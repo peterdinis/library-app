@@ -1,13 +1,12 @@
-import { Component } from '@angular/core';
-import { IconsModule } from '../icons/icons.module';
-import { ButtonModule } from 'primeng/button';
-import { CommonModule } from '@angular/common';
+import { CommonModule } from "@angular/common";
+import { Component } from "@angular/core";
+import { ButtonModule } from "primeng/button";
+import { IconsModule } from "../icons/icons.module";
 
 @Component({
-  selector: 'app-home',
-  imports: [IconsModule, ButtonModule, CommonModule],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css',
+	selector: "app-home",
+	imports: [IconsModule, ButtonModule, CommonModule],
+	templateUrl: "./home.component.html",
+	styleUrl: "./home.component.css",
 })
-export class HomeComponent {
-}
+export class HomeComponent {}

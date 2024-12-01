@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import { LucideAngularModule, Menu, Moon, Sun, X } from 'lucide-angular';
+import { Home, LucideAngularModule, Menu, School, X } from 'lucide-angular';
 
 @NgModule({
-  imports: [LucideAngularModule.pick({ Menu, X, Moon, Sun })],
+  imports: [LucideAngularModule.pick({ Menu, X, Home, School })],
   exports: [LucideAngularModule],
 })
 export class IconsModule {}

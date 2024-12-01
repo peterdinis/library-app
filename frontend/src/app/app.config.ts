@@ -18,7 +18,11 @@ import {
 	X,
 } from "lucide-angular";
 import { routes } from "./app.routes";
-
+import {
+	provideTanStackQuery,
+	QueryClient,
+  } from '@tanstack/angular-query-experimental'
+  
 export const appConfig: ApplicationConfig = {
 	providers: [
 		provideZoneChangeDetection({ eventCoalescing: true }),
@@ -34,5 +38,6 @@ export const appConfig: ApplicationConfig = {
 		),
 		provideRouter(routes),
 		provideClientHydration(withEventReplay()),
+		provideTanStackQuery(new QueryClient())
 	],
 };

@@ -16,15 +16,12 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./button.css'],
 })
 export class ButtonComponent {
-  /** Is this the principal call to action on the page? */
   @Input()
   primary = false;
 
-  /** What background color to use */
   @Input()
   backgroundColor?: string;
 
-  /** How large should the button be? */
   @Input()
   size: 'small' | 'medium' | 'large' = 'medium';
 

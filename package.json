@@ -8,14 +8,14 @@
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"format": "prettier --write .",
-		"lint": "prettier --check . && eslint .",
+		"format": "bunx biome check --write .",
 		"test:unit": "vitest",
 		"test": "npm run test:unit -- --run",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build"
 	},
 	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
 		"@chromatic-com/storybook": "^3.2.2",
 		"@eslint/compat": "^1.2.3",
 		"@storybook/addon-essentials": "^8.4.7",

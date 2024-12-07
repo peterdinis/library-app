@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Home, School } from 'lucide-svelte';
+import { Home, School } from "lucide-svelte";
 </script>
 
 <div class="overflow-y-hidden">

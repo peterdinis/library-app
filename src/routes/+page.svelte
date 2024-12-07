@@ -1,6 +1,5 @@
 <script>
-	import HomepageWrapper from "$lib/components/homepage/HomepageWrapper.svelte";
-
+	import HomepageWrapper from '$lib/components/homepage/HomepageWrapper.svelte';
 </script>
 
 <HomepageWrapper />

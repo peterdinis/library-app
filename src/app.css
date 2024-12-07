@@ -68,12 +68,31 @@
 	}
 }
 
-@keyframes fadeIn {
-	from {
-		opacity: 0;
+@layer utilities {
+	/* Add keyframes for fade-in and scale */
+	@keyframes fade-in-scale {
+		from {
+			opacity: 0;
+			transform: scale(0.9);
+		}
+		to {
+			opacity: 1;
+			transform: scale(1);
+		}
 	}
-	to {
-		opacity: 1;
+
+	/* Animation class for fade-in with scale */
+	.animate-fade-in-scale {
+		animation: fade-in-scale 0.5s ease-in-out forwards;
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
 	}
 }
 

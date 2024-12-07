@@ -1,9 +1,60 @@
-<script>
-	import ThemeToggle from "./ThemeToggle.svelte";
-
+<script lang="ts">
+import { Menu, X } from "lucide-svelte";
+import { writable } from "svelte/store";
+import ThemeToggle from "./ThemeToggle.svelte";
+const navbar = writable(false);
+const linkClass =
+	"text-xl dark:text-blue-50 text-black hover:text-primary dark:hover:text-primary focus:text-primary dark:focus:text-primary active:text-primary dark:active:text-primary";
 </script>
-
-<span>
-	Navigation
-	<ThemeToggle />
-</span>
+  
+  <nav class="w-full bg-white dark:bg-background">
+	<div class="mx-auto justify-between px-4 md:flex md:items-center md:px-8 lg:max-w-7xl">
+	  <div>
+		<div class="flex items-center justify-between py-3 md:block md:py-5">
+		  <a href="/" class="text-xl dark:text-blue-50 font-bold text-black">
+			SPŠT Knižnica
+		  </a>
+		  <div class="md:hidden">
+			<button
+			  class="rounded-md p-2 text-gray-700 outline-none focus:border focus:border-gray-400"
+			  on:click={() => navbar.set(!$navbar)}
+			>
+			  {#if $navbar}
+				<X class="text-black dark:text-blue-50 h-6 font-bold" />
+			  {:else}
+				<Menu class="text-black dark:text-blue-50 h-6 font-bold" />
+			  {/if}
+			</button>
+		  </div>
+		</div>
+	  </div>
+	  <div>
+		<div
+		  class="mt-8 flex-1 justify-self-center pb-3 md:mt-0 md:block md:pb-0"
+		  class:hidden={$navbar ? 'block' : 'hidden'}
+		>
+		  <ul class="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+			<li class={linkClass}>
+			  <a href="/">Domov</a>
+			</li>
+			<li class={linkClass}>
+			  <a href="/books">Knihy</a>
+			</li>
+			<li class={linkClass}>
+			  <a href="/categories">Kategórie</a>
+			</li>
+			<li class={linkClass}>
+			  <a href="/publishers">Vydavateľstvá</a>
+			</li>
+			<li class={linkClass}>
+			  <a href="/authors">Spisovatelia</a>
+			</li>
+			<li class={linkClass}>
+				<ThemeToggle />
+			</li>
+		  </ul>
+		</div>
+	  </div>
+	</div>
+  </nav>
+  

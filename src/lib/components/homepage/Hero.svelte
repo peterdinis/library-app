@@ -1,12 +1,9 @@
 <script lang="ts">
-import { Button } from "$lib/components/ui/button"; // Adjust path to your ShadCN UI setup
-import schollImage from "$lib/img/main.png"; // Update path as per your project structure
+import schollImage from "$lib/img/main.png"; 
 import { onMount } from "svelte";
 
-// Custom animations using CSS classes
 let isVisible = false;
 
-// Wait for the component to mount and trigger the animation
 onMount(() => {
 	requestAnimationFrame(() => {
 		isVisible = true;

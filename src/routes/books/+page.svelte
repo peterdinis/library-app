@@ -1,1 +1,6 @@
-<h1>Books</h1>
+<script>
+
+  import BooksWrapper from "$lib/components/books/BooksWrapper.svelte";
+
+</script>
+<BooksWrapper />

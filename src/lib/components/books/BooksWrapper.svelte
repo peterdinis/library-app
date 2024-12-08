@@ -1,1 +1,3 @@
-<h2>Books page</h2>
+<div class="flex justify-center items-center">
+	<h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mt-5">Všetky knihy</h1>
+</div>	

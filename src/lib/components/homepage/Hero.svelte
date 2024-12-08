@@ -1,5 +1,5 @@
 <script lang="ts">
-import schollImage from "$lib/img/main.png"; 
+import schollImage from "$lib/img/main.png";
 import { onMount } from "svelte";
 
 let isVisible = false;

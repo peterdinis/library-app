@@ -49,24 +49,3 @@ import { Home, School } from "lucide-svelte";
 		</div>
 	</div>
 </div>
-
-<!-- <style>
-  @layer utilities {
-    /* Keyframes for fade-in with scale */
-    @keyframes fade-in-scale {
-      0% {
-        opacity: 0;
-        transform: scale(0.9);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    /* Add animation class */
-    .animate-fade-in-scale {
-      animation: fade-in-scale 0.5s ease-in-out forwards;
-    }
-  }
-</style> -->

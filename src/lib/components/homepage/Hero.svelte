@@ -29,7 +29,6 @@ onMount(() => {
 
 <div class="container relative mx-auto px-4 xl:px-0">
 	<div class={`flex flex-col-reverse md:flex-row fade-in ${isVisible ? 'visible' : ''}`}>
-		<!-- Text Section -->
 		<div class="md:w-3/5 md:pt-24 lg:py-32">
 			<h1 class="text-center text-3xl font-black leading-tight tracking-tighter text-gray-900 dark:text-gray-50 md:w-7/12 md:text-left lg:text-6xl xl:text-8xl">
 				SPŠT Knižnica
@@ -41,7 +40,7 @@ onMount(() => {
 				<Button variant="default" class="mr-4">
 					<a href="/books">Zobraziť všetky knihy</a>
 				</Button>
-				<Button variant="secondary">
+				<Button variant="secondary" class="ml-4">
 					<a href="https://www.spsbj.sk/" target="_blank" rel="noopener noreferrer">
 						Školská stránka
 					</a>
@@ -49,7 +48,6 @@ onMount(() => {
 			</div>
 		</div>
 
-		<!-- Image Section -->
 		<div class="m-auto flex h-64 items-center overflow-hidden sm:w-2/5 md:h-auto fade-in">
 			<img src={schollImage} alt="Scholl homepage" class="w-full h-auto" loading="eager" />
 		</div>

@@ -1,8 +1,9 @@
 <script>
 import Services from "../homepage/Services.svelte";
 import Footer from "../shared/Footer.svelte";
+import Hero from "./Hero.svelte";
 </script>
 
-<span>Homepage</span>
+<Hero />
 <Services />
 <Footer />

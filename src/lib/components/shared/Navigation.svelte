@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { Menu, X } from "lucide-svelte";
-	import { writable } from "svelte/store";
-	import ThemeToggle from "./ThemeToggle.svelte";
-	
-	const navbar = writable(false);
+import { Menu, X } from "lucide-svelte";
+import { writable } from "svelte/store";
+import ThemeToggle from "./ThemeToggle.svelte";
+
+const navbar = writable(false);
 </script>
 
 <nav class="w-full bg-white dark:bg-background">

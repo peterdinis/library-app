@@ -1,27 +1,34 @@
 <script lang="ts">
-	import { motion } from 'svelte-motion';
-	import { Button } from '$lib/components/ui/button'; // Adjust path to your ShadCN UI setup
-	import schollImage from '$lib/img/main.png'; // Update path as per your project structure
+import { Button } from "$lib/components/ui/button"; // Adjust path to your ShadCN UI setup
+import schollImage from "$lib/img/main.png"; // Update path as per your project structure
+import { onMount } from "svelte";
 
-	const homepageVariants = {
-		hidden: { opacity: 0, scale: 0.9 },
-		visible: {
-			opacity: 1,
-			scale: 1,
-			transition: {
-				duration: 0.5,
-			},
-		},
-	};
+// Custom animations using CSS classes
+let isVisible = false;
+
+// Wait for the component to mount and trigger the animation
+onMount(() => {
+	requestAnimationFrame(() => {
+		isVisible = true;
+	});
+});
 </script>
 
-<motion.div
-	variants={homepageVariants}
-	initial="hidden"
-	animate="visible"
-	class="container relative mx-auto px-4 xl:px-0"
->
-	<div class="flex flex-col-reverse md:flex-row">
+<style>
+	.fade-in {
+		opacity: 0;
+		transform: scale(0.9);
+		transition: opacity 0.5s ease, transform 0.5s ease;
+	}
+
+	.fade-in.visible {
+		opacity: 1;
+		transform: scale(1);
+	}
+</style>
+
+<div class="container relative mx-auto px-4 xl:px-0">
+	<div class={`flex flex-col-reverse md:flex-row fade-in ${isVisible ? 'visible' : ''}`}>
 		<!-- Text Section -->
 		<div class="md:w-3/5 md:pt-24 lg:py-32">
 			<h1 class="text-center text-3xl font-black leading-tight tracking-tighter text-gray-900 dark:text-gray-50 md:w-7/12 md:text-left lg:text-6xl xl:text-8xl">
@@ -43,8 +50,8 @@
 		</div>
 
 		<!-- Image Section -->
-		<div class="m-auto flex h-64 items-center overflow-hidden sm:w-2/5 md:h-auto">
+		<div class="m-auto flex h-64 items-center overflow-hidden sm:w-2/5 md:h-auto fade-in">
 			<img src={schollImage} alt="Scholl homepage" class="w-full h-auto" loading="eager" />
 		</div>
 	</div>
-</motion.div>
+</div>

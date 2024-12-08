@@ -1,12 +1,9 @@
 <script lang="ts">
-import { Button } from "$lib/components/ui/button"; // Adjust path to your ShadCN UI setup
-import schollImage from "$lib/img/main.png"; // Update path as per your project structure
+import schollImage from "$lib/img/main.png"; 
 import { onMount } from "svelte";
 
-// Custom animations using CSS classes
 let isVisible = false;
 
-// Wait for the component to mount and trigger the animation
 onMount(() => {
 	requestAnimationFrame(() => {
 		isVisible = true;
@@ -37,14 +34,14 @@ onMount(() => {
 				<q>Knihy sú jedinečne prenosné kúzlo</q> - Stephen King
 			</h2>
 			<div class="flex justify-center md:justify-start">
-				<Button variant="default" class="mr-4">
+				<button class="mr-4 h-10 px-8 focus-visible:ring-ring p-2 ml-4 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-black dark:text-zinc-50 hover:bg-secondary/90 shadow">
 					<a href="/books">Zobraziť všetky knihy</a>
-				</Button>
-				<Button variant="secondary" class="ml-4">
+				</button>
+				<button class="focus-visible:ring-ring p-2 h-10 px-8 ml-4 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 shadow">
 					<a href="https://www.spsbj.sk/" target="_blank" rel="noopener noreferrer">
 						Školská stránka
 					</a>
-				</Button>
+				</button>
 			</div>
 		</div>
 

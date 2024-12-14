@@ -17,44 +17,9 @@ export default meta;
 
 type Story = StoryObj<typeof TitleHeading>;
 
-export const Heading1: Story = {
+export const Default: Story = {
   args: {
     heading: "SPŠT Knižnica",
     level: 1,
-  },
-};
-
-export const Heading2: Story = {
-  args: {
-    heading: "SPŠT Knižnica",
-    level: 2,
-  },
-};
-
-export const Heading3: Story = {
-  args: {
-    heading: "SPŠT Knižnica",
-    level: 3,
-  },
-};
-
-export const Heading4: Story = {
-	args: {
-	  heading: "SPŠT Knižnica",
-	  level: 4,
-	},
-  }
-  
-  export const Heading5: Story = {
-	args: {
-	  heading: "SPŠT Knižnica",
-	  level: 5,
-	},
-  };
-
-export const Heading6: Story = {
-  args: {
-    heading: "SPŠT Knižnica",
-    level: 6,
   },
 };

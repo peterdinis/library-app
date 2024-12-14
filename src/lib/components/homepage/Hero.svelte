@@ -1,5 +1,4 @@
 <script lang="ts">
-import schollImage from "$lib/img/main.png";
 import { onMount } from "svelte";
 
 let isVisible = false;
@@ -10,19 +9,6 @@ onMount(() => {
 	});
 });
 </script>
-
-<style>
-	.fade-in {
-		opacity: 0;
-		transform: scale(0.9);
-		transition: opacity 0.5s ease, transform 0.5s ease;
-	}
-
-	.fade-in.visible {
-		opacity: 1;
-		transform: scale(1);
-	}
-</style>
 
 <div class="container relative mx-auto px-4 xl:px-0">
 	<div class={`flex flex-col-reverse md:flex-row fade-in ${isVisible ? 'visible' : ''}`}>
@@ -46,7 +32,7 @@ onMount(() => {
 		</div>
 
 		<div class="m-auto flex h-64 items-center overflow-hidden sm:w-2/5 md:h-auto fade-in">
-			<img src={schollImage} alt="Scholl homepage" class="w-full h-auto" loading="eager" />
+			<img src="https://raw.githubusercontent.com/peterdinis/spst-library/refs/heads/main/public/img/main.png" alt="Scholl homepage" class="w-full h-auto" loading="eager" />
 		</div>
 	</div>
 </div>

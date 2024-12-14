@@ -1,5 +1,5 @@
 <script>
-
+  import AllBooks from "./AllBooks.svelte";
   import BookSearch from "./BookSearch.svelte";
 
 </script>
@@ -9,4 +9,8 @@
 
 <div class="mt-5 flex justify-center items-center">
 	<BookSearch />
+</div>
+
+<div class="mt-5">
+	<AllBooks />
 </div>

@@ -1,6 +1,6 @@
 <script lang="ts">
-  import * as Card from "$lib/components/ui/card/index.js";
-  import Button from "../ui/button/button.svelte";
+import * as Card from "$lib/components/ui/card/index.js";
+import Button from "../ui/button/button.svelte";
 </script>
 
 <div

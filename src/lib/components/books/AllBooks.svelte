@@ -8,7 +8,7 @@ import Button from "../ui/button/button.svelte";
 >
 <Card.Root class="w-[400px] bg-slate-100 dark:bg-slate-800">
     <Card.Header>
-      <Card.Title class="flex justify-center items-center font-bold text-3xl">Kniha nadpis</Card.Title>
+      <Card.Title class="flex justify-center items-center font-bold text-4xl">Kniha nadpis</Card.Title>
     </Card.Header>
     <Card.Content class="mt-4 break-all">Autor/ka meno</Card.Content>
     <Card.Footer class="flex justify-between">

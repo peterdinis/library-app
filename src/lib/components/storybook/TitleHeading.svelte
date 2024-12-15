@@ -1,7 +1,7 @@
 <script lang="ts">
-	export let heading: string = "SPŠT Knižnica";
-	export let level: 1 | 2 | 3 | 4 | 5 | 6 = 1;
-  </script>
+export const heading = "SPŠT Knižnica";
+export const level: 1 | 2 | 3 | 4 | 5 | 6 = 1;
+</script>
   
   <svelte:element
 	this={`h${level}`}

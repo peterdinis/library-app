@@ -1,20 +1,20 @@
 <script lang="ts">
-	import { Pagination as PaginationPrimitive } from "bits-ui";
-	import { cn } from "$lib/utils.js";
-	import { type Props, buttonVariants } from "$lib/components/ui/button/index.js";
+import { type Props, buttonVariants } from "$lib/components/ui/button/index.js";
+import { cn } from "$lib/utils.js";
+import type { Pagination as PaginationPrimitive } from "bits-ui";
 
-	let {
-		ref = $bindable(null),
-		class: className,
-		size = "icon",
-		isActive = false,
-		page,
-		children,
-		...restProps
-	}: PaginationPrimitive.PageProps &
-		Props & {
-			isActive: boolean;
-		} = $props();
+const {
+	ref = $bindable(null),
+	class: className,
+	size = "icon",
+	isActive = false,
+	page,
+	children,
+	...restProps
+}: PaginationPrimitive.PageProps &
+	Props & {
+		isActive: boolean;
+	} = $props();
 </script>
 
 {#snippet Fallback()}

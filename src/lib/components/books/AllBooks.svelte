@@ -5,14 +5,15 @@
 <div
   class="mx-auto ml-3 mt-5 grid gap-8 overflow-x-auto pt-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
 >
-  <Card.Root class="w-[350px]">
+  <Card.Root class="w-[450px] bg-slate-100 dark:bg-slate-800">
     <Card.Header>
-      <Card.Title>Create project</Card.Title>
-      <Card.Description>Deploy your new project in one-click.</Card.Description>
+      <Card.Title class="flex justify-center items-center font-bold text-3xl">Create project</Card.Title>
     </Card.Header>
-    <Card.Content>Content</Card.Content>
+    <Card.Content class="mt-4 break-all">Content</Card.Content>
     <Card.Footer class="flex justify-between">
-      <button>Cancel</button>
+      <button class="">
+		Detail knihy
+	  </button>
     </Card.Footer>
   </Card.Root>
 </div>

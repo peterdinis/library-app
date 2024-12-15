@@ -1,5 +1,6 @@
 <script lang="ts">
   import * as Card from "$lib/components/ui/card/index.js";
+  import Button from "../ui/button/button.svelte";
 </script>
 
 <div
@@ -11,9 +12,9 @@
     </Card.Header>
     <Card.Content class="mt-4 break-all">Content</Card.Content>
     <Card.Footer class="flex justify-between">
-      <button class="">
-		Detail knihy
-	  </button>
+      <Button variant="default">
+		 <a href="/books/1">Detail knihy</a>
+	  </Button>
     </Card.Footer>
   </Card.Root>
 </div>
